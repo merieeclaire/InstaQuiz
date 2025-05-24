@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/brain"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:src="@drawable/brain" />
+
+    <TextView
+        android:id="@+id/create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:layout_marginLeft="90dp"
+        android:text="Create a Quiz"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="120dp"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/pdfNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter PDF name"
+            android:textSize="15dp"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/uploadFileBtn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/buttonshape"
+                android:text="+" />
+
+            <TextView
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="10dp"
+                android:text="Upload File"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/fileNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="No file selected"
+                android:padding="16dp"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="50dp"
+                android:text="Choose Format"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:id="@+id/upto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="77dp"
+                android:layout_marginLeft="153dp"
+                android:layout_marginBottom="20dp"
+                android:text="up to 3"
+                android:textSize="13dp"
+                />
+
+            <CheckBox
+                android:id="@+id/mcqCheck"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="110dp"
+                android:text="Multiple Choice" />
+
+            <EditText
+                android:id="@+id/mcqCount"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="150dp"
+                android:hint="number of MCQs"
+                android:textSize="10dp"
+                android:inputType="number" />
+
+            <CheckBox
+                android:id="@+id/trueFalseCheck"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="150dp"
+                android:text="True/False" />
+
+            <EditText
+                android:id="@+id/tfCount"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginLeft="150dp"
+                android:hint="number of true/false"
+                android:textSize="10dp"
+                android:inputType="number" />
+
+            <CheckBox
+                android:id="@+id/fillBlankCheck"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="190dp"
+                android:text="Fill in the Blank" />
+
+            <EditText
+                android:id="@+id/fbCount"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="150dp"
+                android:hint="number of fill in the blanks"
+                android:textSize="10dp"
+                android:inputType="number" />
+
+            <CheckBox
+                android:id="@+id/identificationCheck"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="230dp"
+                android:text="Identification" />
+
+            <EditText
+                android:id="@+id/identCount"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="220dp"
+                android:layout_marginLeft="150dp"
+                android:hint="number of identification"
+                android:textSize="10dp"
+                android:inputType="number" />
+
+            <CheckBox
+                android:id="@+id/enumerationCheck"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="270dp"
+                android:text="Enumeration" />
+
+            <EditText
+                android:id="@+id/enumCount"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="150dp"
+                android:hint="number of enumeration"
+                android:textSize="10dp"
+                android:inputType="number" />
+
+        </FrameLayout>
+
+
+        <Button
+            android:id="@+id/generateQuizBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Generate Quiz PDF"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btncolor"
+            />
+
+    </LinearLayout>
+
+
+</FrameLayout>
